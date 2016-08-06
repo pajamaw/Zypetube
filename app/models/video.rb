@@ -1,10 +1,11 @@
 class Video
   extend ActiveModel::Naming
-  attr_accessor :id, :title
+  attr_accessor :id, :title, :subs
 
   def initialize(attributes)
     @id = attributes['_id']
     @title = attributes['title']
+    @subs = attributes['subscription_required']
   end
 
   def to_model
