@@ -13,3 +13,45 @@ the app and how it will communicate with the Zype api. Give an overview of the m
 
 Roadmap
 -------
+## Framework
+  * Generate Rails app
+  * Add basic video routes
+  * Add necessary gems
+  * Test out video embedding
+  * Decide where to put video api Call
+  * Decide on authentication
+
+## Videos
+  * Setup video model
+  * Setup Video api service
+  * Setup videoscontroller
+    * index and show
+  * setup index page
+  * setup show with partials and info from video
+
+## Authentication
+  * Auth Service
+  * Session service
+  * Auth controller with zype oauth
+  * Session controller
+  * Add appropriate callbacks with custom methods to ensure "subscription vs non-subscription videos" are distinguished
+  * Add "Firewall" type view
+    * redirects from subscription video with flash alert to sign in
+    * form that has two buttons
+      * Login
+        * Upon successful login redirects back to previous video
+        * Keeps you there until successful login
+      * Subscribe
+        * Nothing for right now
+
+## GUI
+  * Navbar
+    * login/logout
+    * logo -> index
+  * Bootstrap it a little
+  * Add pagination (Kaminari maybe?)
+
+## Heroku
+  * Push it up baby!
+
+## Test it out and Good Luck!
