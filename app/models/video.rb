@@ -1,12 +1,17 @@
-class Video < ApplicationRecord
+class Video
+  extend ActiveModel::Naming
+  attr_accessor :id, :title
 
-  def get_video
-    conn = Faraday.new(:url => 'https://api.zype.com/') do |faraday|
-      faraday.request  :url_encoded             # form-encode POST params
-      faraday.response :logger                  # log requests to STDOUT
-      faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
-    end
-    conn.get
+  def initialize(attributes)
+    @id = attributes['_id']
+    @title = attributes['title']
   end
 
+  def to_model
+    # You will get to_model error, if you don't have this dummy method
+  end
+  # You need this otherwise you get an error
+  def persisted?
+    false
+  end
 end
