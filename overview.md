@@ -1,7 +1,7 @@
-Assignment Guidelines
+Project Guidelines
 =====================
 
-This assignment will be done in two parts:
+This project will be done in two parts:
 
 1. High level architecture overview.
   * Explain how the site will function from a broad level. Describe the architecture of
