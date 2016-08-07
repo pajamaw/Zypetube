@@ -1,3 +1,4 @@
+#require 'pry'
 class VideosController < ApplicationController
 
   def index
@@ -7,9 +8,9 @@ class VideosController < ApplicationController
 
   def show
     zype = ZypeService.new
-    @videos = zype.create_videos_from_api
-    @video = @videos.detect{ |vid| vid.id == params['id']}
-
+    videos = zype.create_videos_from_api
+    @video = videos.detect{ |vid| vid.id == params['id']}
+    #binding.pry
   end
 
 end

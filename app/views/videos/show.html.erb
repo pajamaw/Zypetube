@@ -3,12 +3,15 @@
   " type="text/javascript"></script>
 </div>
 <br>
+<div id="date published">
+  <p><%=@video.published_at.strftime('%B %d, %y')%></p>
+</div>
 <div id="description">
   <p><%=@video.description%></p>
 </div>
 <br>
-<div id="short_description">
+<!--<div id="short_description">
   <p><%=@video.short_description%></p>
-</div>
+</div>-->
 <br>
 <%= link_to 'Back', :back %>
