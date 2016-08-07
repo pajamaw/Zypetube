@@ -2,9 +2,16 @@
   <div id="zype_​<%=@video.id%>"></div><script src="https://player.zype.com/embed/<%=@video.id%>.js?autoplay=true&app_key=<%=ENV['ZYPE_APP_KEY']%>
   " type="text/javascript"></script>
 </div>
+
 <br>
+
+<div id='zype_player'>
+  <div id="zype_​<%=@video.id%>"></div><script src="https://player.zype.com/embed/<%=@video.id%>.js?autoplay=true&access_token=9940d1e6d3f4ff2a38da7248f0f292514c6d4efe0f6b586ed79b35b06f243b9b
+  " type="text/javascript"></script>
+</div>
+
 <div id="date published">
-  <p><%=@video.published_at.strftime('%B %d, %y')%></p>
+  <p>Published on: <%=@video.published_at.strftime('%B %d, %y')%></p>
 </div>
 <div id="description">
   <p><%=@video.description%></p>
