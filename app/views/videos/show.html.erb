@@ -1,6 +1,14 @@
 <div id='zype_player'>
-  <div id="zype_​<%=@vid_id%>"></div><script src="https://player.zype.com/embed/<%=@vid_id%>.js?autoplay=true&app_key=<%=ENV['ZYPE_APP_KEY']%>
+  <div id="zype_​<%=@video.id%>"></div><script src="https://player.zype.com/embed/<%=@video.id%>.js?autoplay=true&app_key=<%=ENV['ZYPE_APP_KEY']%>
   " type="text/javascript"></script>
 </div>
-
+<br>
+<div id="description">
+  <p><%=@video.description%></p>
+</div>
+<br>
+<div id="short_description">
+  <p><%=@video.short_description%></p>
+</div>
+<br>
 <%= link_to 'Back', :back %>

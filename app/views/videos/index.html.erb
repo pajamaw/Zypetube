@@ -3,7 +3,8 @@
 
 <section id="<%=video.title%>"
   <h2>
-    <a href="/videos/<%=video.id%>/<%=video.subs%>"><%=video.title%></a>
+    <%=link_to "#{video.title}", video_path(:id => "#{video.id}", :subs => "#{video.subs}"), video: video, method: "GET"%>
+    <!--<a href="/videos/<%=video.id%>/<%=video.subs%>"><%=video.title%></a>-->
   </h2>
   <br>
   <div id="video_thumbnail">
