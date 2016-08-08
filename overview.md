@@ -28,9 +28,10 @@ Roadmap
   * Setup zype api service
     * Two methods:
       * grabs json body
-      * maps json body into array of video objects 
+      * maps json body into array of video objects
   * Setup videoscontroller
     * index
+      * call ZypeService
     * show
   * setup video views
     * setup index page
