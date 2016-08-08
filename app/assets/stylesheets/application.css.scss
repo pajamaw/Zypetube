@@ -19,5 +19,11 @@
  @import "bourbon";
 
 nav{
-  height: 100px
+  height: 100px;
+  z-index: 5;
+}
+
+.alert{
+  position: fixed;
+  z-index: 5
 }
