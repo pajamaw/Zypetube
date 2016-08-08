@@ -1,7 +1,7 @@
 
 <div class="logmod">
   <div class="logmod__wrapper">
-    <span class="logmod__close">Close</span>
+    <%= link_to 'Close', :back , :class => "logmod__close"%>    
     <div class="logmod__container">
       <ul class="logmod__tabs">
         <li data-tabtar="lgm-2"><a href="#">Login</a></li>
@@ -41,7 +41,7 @@
             <span class="logmod__heading-subtitle">Enter your username and password to <strong>View Subscription Videos</strong></span>
           </div>
           <div class="logmod__form">
-            <form accept-charset="utf-8" action="/sessions" class="simform" method="POST">
+              <%=form_tag('/sessions') do %>
               <div class="sminputs">
                 <div class="input full">
                   <label class="string optional" for="username">Username*</label>
@@ -56,8 +56,8 @@
                 </div>
               </div>
               <div class="simform__actions">
-                <!--<%=submit_tag 'Login'%-->
-                <input class="sumbit" id="submit"name="commit" type="sumbit" value="Log In" />
+                <%=submit_tag 'Log In', :class => 'submit', :id => 'submit'%>
+                <%end%>
             </div>
           </div>
         </div>
