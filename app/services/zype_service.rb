@@ -19,16 +19,17 @@ class ZypeService
     @access_token = access_hash["access_token"]
   end
 
-  def get_videos_json_from_api
+  def get_videos_json_from_api(page= '1')
     resp = Faraday.get('https://api.zype.com/videos?') do |req|
       req.params['app_key'] = ENV['ZYPE_APP_KEY']
-      req.params['per_page'] = '100'
+      req.params['per_page'] = '20'
+      req.params['page']= page
     end
     JSON.parse(resp.body)["response"]
   end
 
-  def create_videos_from_api
-    get_videos_json_from_api.map do |vid|
+  def create_videos_from_api(page='1')
+    get_videos_json_from_api(page).map do |vid|
        Video.new(vid)
     end
   end

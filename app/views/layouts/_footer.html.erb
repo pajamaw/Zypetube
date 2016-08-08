@@ -1,0 +1,15 @@
+<div class="footer">
+  <%if @page == '1'|| @page.nil? %>
+    <a href="/videos/<%=2%>">
+      <h1>Next Page --></h1>
+    </a>
+  <%else%>
+    <span><a href="/videos/<%=@page.to_i - 1%>">
+      <h1> <-- Previous Page </h1>
+    </a>
+  <h1><%=@page%></h1>
+    <a href="/videos/<%=@page.to_i + 1%>">
+        <h1>Next Page --></h1>
+      </a></span>
+  <%end%>
+</div>

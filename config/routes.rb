@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'videos#index'
-  resources :videos
-  get 'videos/:id' => 'videos#show'
+  get 'videos/:page' => 'videos#index'
+  get 'videos/:page/:id' => 'videos#show'
   get 'sessions' => 'sessions#new'
   post 'sessions' => 'sessions#create'
   delete 'sessions' => 'sessions#destroy'

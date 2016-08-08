@@ -1,23 +1,23 @@
 <%if @video.subs %>
-<%=render partial:'videos/subs'%>
+  <%=render partial:'videos/subs'%>
 <%else %>
-<%=render partial: 'videos/norm'%>
+  <%=render partial: 'videos/norm'%>
 <%end%>
 
 
 <br>
-<div id="title">
-  <h3><%=@video.title%></h3>
-</div>
-<div id="date published">
-  <p>Published on: <%=@video.published_at.strftime('%B %d, %y')%></p>
-</div>
-<div id="description">
-  <p><%=@video.description%></p>
-</div>
+  <div id="title">
+    <h3><%=@video.title%></h3>
+  </div>
+  <div id="date published">
+    <p>Published on: <%=@video.published_at.strftime('%B %d, %y')%></p>
+  </div>
+  <div id="description">
+    <p><%=@video.description%></p>
+  </div>
 <br>
 <!--<div id="short_description">
   <p><%=@video.short_description%></p>
 </div>-->
 <br>
-<%= link_to 'Back', :back %>
+  <%= link_to 'Back to Videos', {:controller => 'videos', :action => 'index', :page => @page} %>
