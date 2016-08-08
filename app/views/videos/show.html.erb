@@ -20,4 +20,4 @@
   <p><%=@video.short_description%></p>
 </div>-->
 <br>
-  <%= link_to 'Back to Videos', {:controller => 'videos', :action => 'index', :page => @page} %>
+  <a href="/videos/<%=@page%>">Back to Videos</a>

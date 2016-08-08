@@ -8,6 +8,7 @@ class VideosController < ApplicationController
   end
 
   def show
+    @page = params[:page]
     zype = ZypeService.new
     videos = zype.create_videos_from_api(params['page'])
     @video = videos.detect{ |vid| vid.id == params['id']}
