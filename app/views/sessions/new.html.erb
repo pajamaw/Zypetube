@@ -44,13 +44,13 @@
               <div class="sminputs">
                 <div class="input full">
                   <label class="string optional" for="username">Username*</label>
-                  <input class="string optional" maxlength="255" id="username" placeholder="Email" type="email" size="50" />
+                  <input class="string optional" name="username" maxlength="255" id="username" placeholder="Email" type="email" size="50" />
                 </div>
               </div>
               <div class="sminputs">
                 <div class="input full">
                   <label class="string optional" for="password">Password *</label>
-                  <input class="string optional" maxlength="255" id="password" placeholder="Password" type="password" size="50" />
+                  <input class="string optional" maxlength="255" id="password" name="password" placeholder="Password" type="password" size="50" />
                   <span class="hide-password">Show</span>
                 </div>
               </div>
@@ -64,4 +64,3 @@
     </div>
   </div>
 </div>
-<%= link_to 'Close', :back , :class => "logmod__close"%>

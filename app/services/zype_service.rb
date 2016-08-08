@@ -12,9 +12,10 @@ class ZypeService
       req.params['username']= username
       req.params['password']=password
       req.params['grant_type']="password"
-      req.params['Accept']= 'application/json'
+      req.params['Accept']='application/json'
     end
     access_hash = JSON.parse(response.body)
+    puts access_hash
     @access_token = access_hash["access_token"]
   end
 

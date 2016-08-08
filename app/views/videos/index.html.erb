@@ -8,7 +8,7 @@
   </thead>
   <tbody>
     <%@videos.each do |video|%>
-      <%=render partial: 'index_row', :locals => {:video => video} %>
+      <%=render partial: 'videos/index_row', :locals => {:video => video} %>
     <%end%>
   </tbody>
 </table>

@@ -4,6 +4,7 @@
       <a class="navbar-brand" href="/">
         <%=image_tag('Zype_logo.png', :alt => "Brand")%>
       </a>
+      <%= link_to "logout", {:controller=> "sessions", :action=> "destroy"}, :method => :delete%>
     </div>
   </div>
 </nav>
