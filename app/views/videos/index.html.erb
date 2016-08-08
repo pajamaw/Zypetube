@@ -1,16 +1,14 @@
-<%@videos.each do |video|%>
-
-
-<section id="<%=video.title%>"
-  <h2>
-    <%=link_to "#{video.title}", video_path(:id => "#{video.id}", :subs => "#{video.subs}"), video: video, method: "GET"%>
-    <!--<a href="/videos/<%=video.id%>/<%=video.subs%>"><%=video.title%></a>-->
-  </h2>
-  <br>
-  <div id="video_thumbnail">
-    <a href="/videos/<%=video.id%>/<%=video.subs%>">
-      <img src="<%=video.thumbnails[1]['url']%>"></img>
-    </a>
-
-</section>
-<%end%>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th></th>
+      <th>Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%@videos.each do |video|%>
+      <%=render partial: 'index_row', :locals => {:video => video} %>
+    <%end%>
+  </tbody>
+</table>

@@ -14,3 +14,9 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require_tree .
+
+jQuery(document).ready(function($) {
+    $(".clickable-row").click(function() {
+        window.document.location = $(this).data("href");
+    });
+});
