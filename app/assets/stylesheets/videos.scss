@@ -4,3 +4,20 @@
 #zype_player {
   width: 50%
 }
+footer
+{
+    clear: both;
+}
+#left-paginate{
+  float: left;
+}
+h1#center-paginate{
+  margin: 0px auto;
+}
+#right-paginate{
+  float: right;
+}
+footer *
+{
+    display: inline;
+}
