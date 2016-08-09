@@ -24,7 +24,7 @@ Roadmap
   * Decide on authentication
 
 ## Videos
-  * Setup video model
+  * Setup tableless video model using AR naming conventions
   * Setup zype api service
     * Two methods:
       * grabs json body
@@ -33,6 +33,7 @@ Roadmap
     * index
       * call ZypeService
     * show
+      * call zs again
   * setup video views
     * setup index page
     * setup show with partials and info from video
@@ -40,7 +41,8 @@ Roadmap
 ### Authentication
   * Authenticate User with zype oauth in zypeservice
   * Session controller with access token
-  * Add appropriate callbacks with custom methods to ensure "subscription vs non-subscription videos" are distinguished
+    * reset session upon logout
+  * Add appropriate methods to ensure "subscription vs non-subscription videos" are distinguished
   * Add "Firewall" type view
     * redirects from subscription video with flash alert to sign in
     * form that has two buttons
@@ -55,9 +57,10 @@ Roadmap
     * login/logout
     * logo -> index
   * Bootstrap it a little
-  * Add pagination (Kaminari maybe?)
+  * Add pagination
 
 ### Heroku
   * Push it up baby!
+  * zype.herokuapp.com
 
 ### Test it out and Good Luck!

@@ -8,14 +8,13 @@ class ZypeService
   def authenticate!(client_id, client_secret, username, password)
     response = Faraday.post("https://login.zype.com/oauth/token") do |req|
       req.params['client_id'] = client_id
-      req.params['client_secret']= client_secret
-      req.params['username']= username
-      req.params['password']=password
+      req.params['client_secret'] = client_secret
+      req.params['username'] = username
+      req.params['password'] = password
       req.params['grant_type']="password"
       req.params['Accept']='application/json'
     end
     access_hash = JSON.parse(response.body)
-    puts access_hash
     @access_token = access_hash["access_token"]
   end
 

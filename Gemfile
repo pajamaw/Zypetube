@@ -1,9 +1,13 @@
 source 'https://rubygems.org'
+
 gem 'dotenv-rails'
+
 gem 'faraday'
-gem 'pry'
+
 gem 'bootstrap-sass', '~> 3.2.0'
+
 gem 'autoprefixer-rails'
+
 gem 'bourbon'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'
