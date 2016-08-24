@@ -2,7 +2,7 @@ class VideosController < ApplicationController
 
   def index
     @page = params['page'] ||= '1'
-
+    
     zype = ZypeService.new
     @videos = zype.create_videos_from_api(@page)
   end
